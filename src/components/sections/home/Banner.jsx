@@ -8,7 +8,7 @@ const Banner = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
-              <div data-aos="fade-up"  data-aos-delay="800" className="banner-content">
+              <div data-aos="fade-right"  data-aos-delay="800" className="banner-content">
                 <h1>
                   En Uygun
                   <span style={{ color: "#234b59" }}> MT&amp;STAJ</span>{" "}
@@ -23,7 +23,7 @@ const Banner = () => {
                 </p>
                 <div>
                   <a
-                    href="/Postings"
+                    href="/postings"
                     className="edu-btn"
                     style={{ backgroundColor: "#234b59", borderRadius: 10 }}
                   >
@@ -36,7 +36,7 @@ const Banner = () => {
               <div className="banner-thumbnail">
                 <div>
                   <img data-aos="fade-left"
-                    data-aos-delay="800"
+                    data-aos-delay="500"
                     src="assets/images/banner/girl-1.png"
                     alt="Girl Image"
                   />

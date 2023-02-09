@@ -14,7 +14,7 @@ const Header = () => {
           >
             <div className="header-brand">
               <div className="logo">
-                <Link href="/">
+                <Link href="">
                   <img
                     className="logo-light"
                     src="/assets/images/logo/Mt-logo.png"
@@ -30,7 +30,7 @@ const Header = () => {
                       <Link href="/">Anasayfa</Link>
                     </li>
                     <li>
-                      <Link href="/Postings">Açık İlanlar</Link>
+                      <Link href="/postings">Açık İlanlar</Link>
                     </li>
                     <li>
                       <Link href="/youngTalents">Genç Yetenek Programları</Link>
@@ -62,7 +62,7 @@ const Header = () => {
           <div className="inner">
             <div className="header-top">
               <div className="logo">
-                <a href="/">
+                <a href="">
                   <img
                     className="logo-light"
                     src="/assets/images/logo/Mt-logo.png"
@@ -84,7 +84,7 @@ const Header = () => {
                 <a href="/">Anasayfa</a>
               </li>
               <li>
-                <a href="/Postings">Açık İlanlar</a>
+                <a href="/postings">Açık İlanlar</a>
               </li>
               <li>
                 <a href="/youngTalents">Genç Yetenek Programları</a>

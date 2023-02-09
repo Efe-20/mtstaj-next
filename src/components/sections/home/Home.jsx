@@ -8,7 +8,7 @@ const Home = () => {
       <Banner />
       <div
         data-aos="fade-up"
-        data-aos-duration="2300"
+        data-aos-duration="1500"
         className="features-area-2"
       >
         <div className="container">
@@ -82,7 +82,7 @@ const Home = () => {
           </div>
           <div className="row g-5">
             <div className="col-lg-4">
-              <a href="/Postings">
+              <a href="/postings">
                 <div className="why-choose-box features-box color-primary-style">
                   <div className="icon">
                     <i className="icon-45" />
@@ -160,7 +160,7 @@ const Home = () => {
             <div className="edu-course shadow course-style-1 hover-button-bg-white">
               <div className="inner">
                 <div className="thumbnail">
-                  <a href="/Postings/postingsInner">
+                  <a href="/postings/postingsInner">
                     <img
                       src="assets/images/course/course-07.jpg"
                       alt="Course Meta"
@@ -174,7 +174,7 @@ const Home = () => {
                 </div>
                 <div className="content">
                   <h6 className="title">
-                    <a href="/Postings/postingsInner">
+                    <a href="/postings/postingsInner">
                       Starting SEO as your Home Based Business
                     </a>
                   </h6>
@@ -184,7 +184,7 @@ const Home = () => {
               <div className="course-hover-content">
                 <div className="content">
                   <h6 className="title">
-                    <a href="/Postings/postingsInner">
+                    <a href="/postings/postingsInner">
                       Starting SEO as your Home Based Business
                     </a>
                   </h6>
@@ -193,7 +193,7 @@ const Home = () => {
                     eiusmod tempor.
                   </p>
                   <a
-                    href="/Postings/postingsInner"
+                    href="/postings/postingsInner"
                     className="edu-btn btn-secondary btn-small"
                   >
                     Enrolled <i className="icon-4" />
@@ -206,7 +206,7 @@ const Home = () => {
             <div className="edu-course shadow course-style-1 hover-button-bg-white">
               <div className="inner">
                 <div className="thumbnail">
-                  <a href="/Postings/postingsInner">
+                  <a href="/postings/postingsInner">
                     <img
                       src="assets/images/course/course-04.jpg"
                       alt="Course Meta"
@@ -220,7 +220,7 @@ const Home = () => {
                 </div>
                 <div className="content">
                   <h6 className="title">
-                    <a href="/Postings/postingsInner">
+                    <a href="/postings/postingsInner">
                       Java Programming Masterclass for Software Developers
                     </a>
                   </h6>
@@ -230,7 +230,7 @@ const Home = () => {
               <div className="course-hover-content">
                 <div className="content">
                   <h6 className="title">
-                    <a href="/Postings/postingsInner">
+                    <a href="/postings/postingsInner">
                       Java Programming Masterclass for Software Developers
                     </a>
                   </h6>
@@ -239,7 +239,7 @@ const Home = () => {
                     eiusmod tempor.
                   </p>
                   <a
-                    href="/Postings/postingsInner"
+                    href="/postings/postingsInner"
                     className="edu-btn btn-secondary btn-small"
                   >
                     Enrolled <i className="icon-4" />
@@ -252,7 +252,7 @@ const Home = () => {
             <div className="edu-course shadow course-style-1 hover-button-bg-white">
               <div className="inner">
                 <div className="thumbnail">
-                  <a href="/Postings/postingsInner">
+                  <a href="/postings/postingsInner">
                     <img
                       src="assets/images/course/course-05.jpg"
                       alt="Course Meta"

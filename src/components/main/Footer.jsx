@@ -20,14 +20,13 @@ function Footer() {
                   style={{ paddingLeft: 20 }}
                 >
                   <div className="logo">
-                    <a href="/">
-                      <img
-                        className="logo-light"
-                        src="/assets/images/logo/Mt-logo.png"
-                        alt="Corporate Logo"
-                        style={{ width: 140, minWidth: 140 }}
-                      />
-                    </a>
+                    <a href="/"></a>
+                    <img
+                      className="logo-light"
+                      src="/assets/images/logo/Mt-logo.png"
+                      alt="Corporate Logo"
+                      style={{ width: 140, minWidth: 140 }}
+                    />
                   </div>
                   <p className="widget-title p-0 m-0">
                     En Uygun MT&amp;Staj Programları, <br /> Eğitimler ve Çok
@@ -69,6 +68,7 @@ function Footer() {
                         <a
                           href="https://www.linkedin.com/company/mtstajprogramlari/?viewAsMember=true"
                           className="color-linkd"
+                          target={"_blank"}
                         >
                           <i className="icon-linkedin2" />
                         </a>
@@ -77,6 +77,7 @@ function Footer() {
                         <a
                           href="https://www.instagram.com/mtstajprogramlari/?hl=tr"
                           className="color-ig"
+                          target={"_blank"}
                         >
                           <i className="icon-instagram" />
                         </a>
@@ -85,6 +86,7 @@ function Footer() {
                         <a
                           href="https://twitter.com/MTStaj"
                           className="color-twitter"
+                          target={"_blank"}
                         >
                           <i className="icon-twitter" />
                         </a>
@@ -93,6 +95,7 @@ function Footer() {
                         <a
                           href="https://www.youtube.com/channel/UCTd_1ukC4dY-2NyHdI5tFEw"
                           className="color-yt"
+                          target={"_blank"}
                         >
                           <i className="icon-youtube" />
                         </a>

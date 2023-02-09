@@ -1,10 +1,11 @@
 import React from "react";
+import Head from "next/head";
 import Header from "@/components/main/Header";
 import Footer from "@/components/main/Footer";
+import Loader from "@/components/main/Loader";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "@/styles/globals.css";
-import Loader from "@/components/main/Loader";
 
 function App({ Component, pageProps }) {
   React.useEffect(() => {
@@ -16,8 +17,28 @@ function App({ Component, pageProps }) {
 
   return (
     <>
+      <Head>
+        <>
+          <meta charSet="UTF-8" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+          <title>MT-Staj Programları</title>
+          <meta
+            name="description"
+            content="MT&Staj Programları'yla en uygun kariyer fırsatlarını bir arada bulabilir; çeşitli haberler ve profesyonel yaşama dair tavsiyelerle farklı bakış açılarına ..."
+          />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          />
+          <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="assets/images/logo/Mt-logo.png"
+          />
+        </>
+      </Head>
       <Header />
-      <Loader/>
+      <Loader />
       <Component {...pageProps} />
       <Footer />
 
@@ -28,7 +49,6 @@ function App({ Component, pageProps }) {
       <script src="assets/js/vendor/imageloaded.min.js"></script>
       <script src="assets/js/vendor/jquery-ui.min.js"></script>
       <script src="assets/js/vendor/svg-inject.min.js"></script>
-      <script src="assets/js/vendor/smooth-scroll.min.js"></script>
       <script src="assets/js/app.js"></script>
 
       <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css" />

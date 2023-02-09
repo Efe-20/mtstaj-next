@@ -560,7 +560,7 @@ const PostingsInner = () => {
                 >
                   <div className="inner">
                     <div className="thumbnail">
-                      <Link href="/Postings/postingsInner">
+                      <Link href="/postings/postingsInner">
                         <img
                           src="/assets/images/course/course-15.jpg"
                           alt="Course Meta"
@@ -569,7 +569,7 @@ const PostingsInner = () => {
                     </div>
                     <div className="content">
                       <h5 className="title">
-                        <a href="/Postings/postingsInner">
+                        <a href="/postings/postingsInner">
                           Healthy Sushi Roll - Japanese Popular Cooking Class
                         </a>
                       </h5>
@@ -590,7 +590,7 @@ const PostingsInner = () => {
                 >
                   <div className="inner">
                     <div className="thumbnail">
-                      <a href="/Postings/postingsInner">
+                      <a href="/postings/postingsInner">
                         <img
                           src="/assets/images/course/course-16.jpg"
                           alt="Course Meta"
@@ -599,7 +599,7 @@ const PostingsInner = () => {
                     </div>
                     <div className="content">
                       <h5 className="title">
-                        <a href="/Postings/postingsInner">
+                        <a href="/postings/postingsInner">
                           Nutrition Kitchen - Basics of Cooking for Busy People
                         </a>
                       </h5>
@@ -619,7 +619,7 @@ const PostingsInner = () => {
                 >
                   <div className="inner">
                     <div className="thumbnail">
-                      <a href="/Postings/postingsInner">
+                      <a href="/postings/postingsInner">
                         <img
                           src="/assets/images/course/course-17.jpg"
                           alt="Course Meta"
@@ -628,7 +628,7 @@ const PostingsInner = () => {
                     </div>
                     <div className="content">
                       <h5 className="title">
-                        <a href="/Postings/postingsInner">
+                        <a href="/postings/postingsInner">
                           Vegan Thai Cooking Classes Popular Vegan Recipes
                         </a>
                       </h5>
