@@ -1,7 +1,25 @@
 import React from "react";
 import Link from "next/link";
+import { useState } from "react";
 
 const Postings = () => {
+  const [mockData, setMockData] = useState([]);
+  const [limit, setLimit] = useState(9);
+
+  fetch("https://country-state-city.alikaan-net.workers.dev/test")
+    .then((response) => response.json())
+    .then((res) =>
+      res.length > limit
+        ? () => {
+            res.length = limit;
+            return res;
+          }
+        : res
+    )
+
+    .then((data) => setMockData(data))
+    .catch((error) => console.log(error));
+
   return (
     <div>
       <div className="edu-course-area course-area-1 section-gap-equal">
@@ -69,357 +87,49 @@ const Postings = () => {
               </div>
             </div>
             <div className="col-lg-9 col-pr--35 order-lg-1">
-              <div
-                data-aos="fade-up"
-                className="edu-course course-style-4 course-style-9"
-              >
-                <div className="inner">
-                  <div className="thumbnail">
-                    <Link href="/postings/postingsInner">
-                      <img
-                        src="/assets/images/course/course-12.jpg"
-                        alt="Course Meta"
-                      />
-                    </Link>
-                  </div>
-                  <div data-aos="fade-up" className="content">
-                    <h6 className="title">
-                      <Link href="/postings/postingsInner">
-                        Java Programming Masterclass for Software Developers
-                      </Link>
-                    </h6>
-                    <a href="/postings/postingsInner">
-                      <p>
-                        Lorem ipsum dolor sit amet consectur elit sed eiusmod
-                        tempor incidid unt labore dolore magna.
-                      </p>
-                    </a>
-                    <div className="read-more-btn">
-                      <Link href="/postings/postingsInner"></Link>
-                      <Link
-                        className="edu-btn btn-border btn-medium"
-                        href="/postings/postingsInner"
-                        style={{ backgroundColor: "#234b59", color: "#fff" }}
-                      >
-                        Learn More
-                        <i className="icon-4" />
-                      </Link>
+              {mockData.map((item) => {
+                return (
+                  <div
+                    data-aos="fade-up"
+                    className="edu-course course-style-4 course-style-9"
+                  >
+                    <div className="inner">
+                      <div className="thumbnail">
+                        <Link href="/postings/postingsInner">
+                          <img
+                            src="/assets/images/course/course-12.jpg"
+                            alt="Course Meta"
+                          />
+                        </Link>
+                      </div>
+                      <div data-aos="fade-up" className="content">
+                        <h6 className="title">
+                          <Link href="/postings/postingsInner">
+                            {item.name}
+                          </Link>
+                        </h6>
+                        <a href="/postings/postingsInner">
+                          <p>{item.iso2}</p>
+                        </a>
+                        <div className="read-more-btn">
+                          <Link href="/postings/postingsInner"></Link>
+                          <Link
+                            className="edu-btn btn-border btn-medium"
+                            href="/postings/postingsInner"
+                            style={{
+                              backgroundColor: "#234b59",
+                              color: "#fff",
+                            }}
+                          >
+                            Learn More
+                            <i className="icon-4" />
+                          </Link>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div
-                data-aos="fade-up"
-                className="edu-course course-style-4 course-style-9"
-              >
-                <div className="inner">
-                  <div className="thumbnail">
-                    <Link href="/postings/postingsInner">
-                      <img
-                        src="/assets/images/course/course-11.jpg"
-                        alt="Course Meta"
-                      />
-                    </Link>
-                  </div>
-                  <div data-aos="fade-up" className="content">
-                    <h6 className="title">
-                      <Link href="/postings/postingsInner">
-                        React - The Complete Guide (incl Hooks, React, Redux)
-                      </Link>
-                    </h6>
-                    <Link href="/postings/postingsInner">
-                      <p>
-                        Lorem ipsum dolor sit amet consectur elit sed eiusmod
-                        tempor incidid unt labore dolore magna.
-                      </p>
-                    </Link>
-                    <div className="read-more-btn">
-                      <Link href="/postings/postingsInner"></Link>
-                      <Link
-                        className="edu-btn btn-border btn-medium"
-                        href="/postings/postingsInner"
-                        style={{ backgroundColor: "#234b59", color: "#fff" }}
-                      >
-                        Learn More
-                        <i className="icon-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                data-aos="fade-up"
-                className="edu-course course-style-4 course-style-9"
-              >
-                <div className="inner">
-                  <div className="thumbnail">
-                    <Link href="/postings/postingsInner">
-                      <img
-                        src="/assets/images/course/course-14.jpg"
-                        alt="Course Meta"
-                      />
-                    </Link>
-                  </div>
-                  <div data-aos="fade-up" className="content">
-                    <h6 className="title">
-                      <Link href="/postings/postingsInner">
-                        Microsoft Excel - Excel from Beginner to Advanced
-                      </Link>
-                    </h6>
-                    <Link href="/postings/postingsInner">
-                      <p>
-                        Lorem ipsum dolor sit amet consectur elit sed eiusmod
-                        tempor incidid unt labore dolore magna.
-                      </p>
-                    </Link>
-                    <div className="read-more-btn">
-                      <Link href="/postings/postingsInner"></Link>
-                      <Link
-                        className="edu-btn btn-border btn-medium"
-                        href="/postings/postingsInner"
-                        style={{ backgroundColor: "#234b59", color: "#fff" }}
-                      >
-                        Learn More
-                        <i className="icon-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                data-aos="fade-up"
-                className="edu-course course-style-4 course-style-9"
-              >
-                <div className="inner">
-                  <div className="thumbnail">
-                    <Link href="/postings/postingsInner">
-                      <img
-                        src="/assets/images/course/course-13.jpg"
-                        alt="Course Meta"
-                      />
-                    </Link>
-                  </div>
-                  <div data-aos="fade-up" className="content">
-                    <h6 className="title">
-                      <Link href="/postings/postingsInner">
-                        Adobe Premiere Pro CC Master-class: Video Editing
-                      </Link>
-                    </h6>
-                    <Link href="/postings/postingsInner">
-                      <p>
-                        Lorem ipsum dolor sit amet consectur elit sed eiusmod
-                        tempor incidid unt labore dolore magna.
-                      </p>
-                    </Link>
-                    <div className="read-more-btn">
-                      <Link href="/postings/postingsInner"></Link>
-                      <Link
-                        className="edu-btn btn-border btn-medium"
-                        href="/postings/postingsInner"
-                        style={{ backgroundColor: "#234b59", color: "#fff" }}
-                      >
-                        Learn More
-                        <i className="icon-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                data-aos="fade-up"
-                className="edu-course course-style-4 course-style-9"
-              >
-                <div className="inner">
-                  <div className="thumbnail">
-                    <Link href="/postings/postingsInner">
-                      <img
-                        src="/assets/images/course/course-41.jpg"
-                        alt="Course Meta"
-                      />
-                    </Link>
-                  </div>
-                  <div data-aos="fade-up" className="content">
-                    <h6 className="title">
-                      <Link href="/postings/postingsInner">
-                        The Complete Camtasia Course for Content Creators
-                      </Link>
-                    </h6>
-                    <Link href="/postings/postingsInner">
-                      <p>
-                        Lorem ipsum dolor sit amet consectur elit sed eiusmod
-                        tempor incidid unt labore dolore magna.
-                      </p>
-                    </Link>
-                    <div className="read-more-btn">
-                      <Link href="/postings/postingsInner"></Link>
-                      <Link
-                        className="edu-btn btn-border btn-medium"
-                        href="/postings/postingsInner"
-                        style={{ backgroundColor: "#234b59", color: "#fff" }}
-                      >
-                        Learn More
-                        <i className="icon-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                data-aos="fade-up"
-                className="edu-course course-style-4 course-style-9"
-              >
-                <div className="inner">
-                  <div className="thumbnail">
-                    <Link href="/postings/postingsInner">
-                      <img
-                        src="/assets/images/course/course-42.jpg"
-                        alt="Course Meta"
-                      />
-                    </Link>
-                  </div>
-                  <div data-aos="fade-up" className="content">
-                    <h6 className="title">
-                      <a href="/postings/postingsInner">
-                        Build Responsive Real-World Websites with HTML &amp; CSS
-                      </a>
-                    </h6>
-                    <Link href="/postings/postingsInner">
-                      <p>
-                        Lorem ipsum dolor sit amet consectur elit sed eiusmod
-                        tempor incidid unt labore dolore magna.
-                      </p>
-                    </Link>
-                    <div className="read-more-btn">
-                      <Link href="/postings/postingsInner"></Link>
-                      <Link
-                        className="edu-btn btn-border btn-medium"
-                        href="/postings/postingsInner"
-                        style={{ backgroundColor: "#234b59", color: "#fff" }}
-                      >
-                        Learn More
-                        <i className="icon-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                data-aos="fade-up"
-                className="edu-course course-style-4 course-style-9"
-              >
-                <div className="inner">
-                  <div className="thumbnail">
-                    <Link href="/postings/postingsInner">
-                      <img
-                        src="/assets/images/course/course-43.jpg"
-                        alt="Course Meta"
-                      />
-                    </Link>
-                  </div>
-                  <div data-aos="fade-up" className="content">
-                    <h6 className="title">
-                      <Link href="/postings/postingsInner">
-                        C Programming For Beginners - Master the C Language
-                      </Link>
-                    </h6>
-                    <Link href="/postings/postingsInner">
-                      <p>
-                        Lorem ipsum dolor sit amet consectur elit sed eiusmod
-                        tempor incidid unt labore dolore magna.
-                      </p>
-                    </Link>
-                    <div className="read-more-btn">
-                      <Link href="/postings/postingsInner"></Link>
-                      <Link
-                        className="edu-btn btn-border btn-medium"
-                        href="/postings/postingsInner"
-                        style={{ backgroundColor: "#234b59", color: "#fff" }}
-                      >
-                        Learn More
-                        <i className="icon-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                data-aos="fade-up"
-                className="edu-course course-style-4 course-style-9"
-              >
-                <div className="inner">
-                  <div className="thumbnail">
-                    <Link href="/postings/postingsInner">
-                      <img
-                        src="/assets/images/course/course-44.jpg"
-                        alt="Course Meta"
-                      />
-                    </Link>
-                  </div>
-                  <div data-aos="fade-up" className="content">
-                    <h6 className="title">
-                      <a href="/postings/postingsInner">
-                        Vue - The Complete Guide (w/ Router, Composition API)
-                      </a>
-                    </h6>
-                    <Link href="/postings/postingsInner">
-                      <p>
-                        Lorem ipsum dolor sit amet consectur elit sed eiusmod
-                        tempor incidid unt labore dolore magna.
-                      </p>
-                    </Link>
-                    <div className="read-more-btn">
-                      <Link href="/postings/postingsInner"></Link>
-                      <Link
-                        className="edu-btn btn-border btn-medium"
-                        href="/postings/postingsInner"
-                        style={{ backgroundColor: "#234b59", color: "#fff" }}
-                      >
-                        Learn More
-                        <i className="icon-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                data-aos="fade-up"
-                className="edu-course course-style-4 course-style-9"
-              >
-                <div className="inner">
-                  <div className="thumbnail">
-                    <Link href="/postings/postingsInner">
-                      <img
-                        src="/assets/images/course/course-45.jpg"
-                        alt="Course Meta"
-                      />
-                    </Link>
-                  </div>
-                  <div data-aos="fade-up" className="content">
-                    <h6 className="title">
-                      <Link href="/postings/postingsInner">
-                        Master Microservices with Spring Boot &amp; Spring Cloud
-                      </Link>
-                    </h6>
-                    <Link href="/postings/postingsInner">
-                      <p>
-                        Lorem ipsum dolor sit amet consectur elit sed eiusmod
-                        tempor incidid unt labore dolore magna.
-                      </p>
-                    </Link>
-                    <div className="read-more-btn">
-                      <Link href="/postings/postingsInner"></Link>
-                      <Link
-                        className="edu-btn btn-border btn-medium"
-                        href="/postings/postingsInner"
-                        style={{ backgroundColor: "#234b59", color: "#fff" }}
-                      >
-                        Learn More
-                        <i className="icon-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </div>
         </div>

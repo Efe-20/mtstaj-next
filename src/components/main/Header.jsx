@@ -14,7 +14,7 @@ const Header = () => {
           >
             <div className="header-brand">
               <div className="logo">
-                <Link href="">
+                <Link href="/">
                   <img
                     className="logo-light"
                     src="/assets/images/logo/Mt-logo.png"

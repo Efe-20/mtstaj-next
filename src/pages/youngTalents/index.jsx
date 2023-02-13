@@ -1,8 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import YoungTalentsInner from "./youngTalentsInner";
 
 const YoungTalents = () => {
+  const [data, setData] = useState([
+    {
+      name: "Ahmet",
+      job: "ahmet",
+      description: "ahmet ahmet ahmet ahmet ahmet ahmet ahmet",
+    },
+    {
+      name: "Ahmet",
+      job: "ahmet",
+      description: "ahmet ahmet ahmet ahmet ahmet ahmet ahmet",
+    },
+    {
+      name: "Ahmet",
+      job: "ahmet",
+      description: "ahmet ahmet ahmet ahmet ahmet ahmet ahmet",
+    },
+    {
+      name: "Ahmet",
+      job: "ahmet",
+      description: "ahmet ahmet ahmet ahmet ahmet ahmet ahmet",
+    },
+    {
+      name: "Ahmet",
+      job: "ahmet",
+      description: "ahmet ahmet ahmet ahmet ahmet ahmet ahmet",
+    },
+    {
+      name: "Ahmet",
+      job: "ahmet",
+      description: "ahmet ahmet ahmet ahmet ahmet ahmet ahmet",
+    },
+    {
+      name: "Ahmet",
+      job: "ahmet",
+      description: "ahmet ahmet ahmet ahmet ahmet ahmet ahmet",
+    },
+    {
+      name: "Ahmet",
+      job: "ahmet",
+      description: "ahmet ahmet ahmet ahmet ahmet ahmet ahmet",
+    },
+    {
+      name: "Ahmet",
+      job: "ahmet",
+      description: "ahmet ahmet ahmet ahmet ahmet ahmet ahmet",
+    },
+  ]);
+
+  const [mockData, setMockData] = useState([]);
+  const [limit, setLimit] = useState(9);
+
+  fetch("")
+    .then((response) => response.json())
+    .then((res) =>
+      res.length > limit
+        ? () => {
+            res.length = limit;
+            return res;
+          }
+        : res
+    )
+    .then((data) => setMockData(data))
+    .catch((error) => console.log(error));
+
   return (
     <div>
       <>
@@ -16,198 +80,39 @@ const YoungTalents = () => {
               </span>
             </div>
             <div className="row g-5">
-              <div className="col-lg-4 col-md-6">
-                <div
-                  data-aos="fade-up"
-                  data-aos-duration="800"
-                  className="edu-team-grid team-style-2"
-                >
-                  <div className="inner">
-                    <div className="thumbnail-wrap">
-                      <div className="thumbnail">
-                        <Link href="/youngTalents/youngTalentsInner">
-                          <img
-                            src="assets/images/team/team-05.webp"
-                            alt="team images"
-                          />
-                        </Link>
+              {data.map((item) => {
+                return (
+                  <div className="col-lg-4 col-md-6">
+                    <div
+                      data-aos="fade-up"
+                      data-aos-duration="800"
+                      className="edu-team-grid team-style-2"
+                    >
+                      <div className="inner">
+                        <div className="thumbnail-wrap">
+                          <div className="thumbnail">
+                            <Link href="/youngTalents/youngTalentsInner">
+                              <img
+                                src="assets/images/team/team-05.webp"
+                                alt="team images"
+                              />
+                            </Link>
+                          </div>
+                        </div>
+                        <div className="content">
+                          <h5 className="title">
+                            <Link href="/youngTalents/youngTalentsInner">
+                              {item.name}
+                            </Link>
+                          </h5>
+                          <span className="designation">{item.job}</span>
+                          <p>{item.description}</p>
+                        </div>
                       </div>
                     </div>
-                    <div className="content">
-                      <h5 className="title">
-                        <Link href="/youngTalents/youngTalentsInner">
-                          Jane Seymour
-                        </Link>
-                      </h5>
-                      <span className="designation">Teacher</span>
-                      <p>
-                        Consectetur adipisicing elit, sed do eius mod tempor
-                        incididunt
-                      </p>
-                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6">
-                <div
-                  data-aos="fade-up"
-                  data-aos-duration="800"
-                  className="edu-team-grid team-style-2"
-                >
-                  <div className="inner">
-                    <div className="thumbnail-wrap">
-                      <div className="thumbnail">
-                        <Link href="/youngTalents/youngTalentsInner">
-                          <img
-                            src="assets/images/team/team-06.webp"
-                            alt="team images"
-                          />
-                        </Link>
-                      </div>
-                    </div>
-                    <div className="content">
-                      <h5 className="title">
-                        <Link href="/youngTalents/youngTalentsInner">
-                          Edward Norton
-                        </Link>
-                      </h5>
-                      <span className="designation">Teacher</span>
-                      <p>
-                        Consectetur adipisicing elit, sed do eius mod tempor
-                        incididunt
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6">
-                <div
-                  data-aos="fade-up"
-                  data-aos-duration="800"
-                  className="edu-team-grid team-style-2"
-                >
-                  <div className="inner">
-                    <div className="thumbnail-wrap">
-                      <div className="thumbnail">
-                        <Link href="/youngTalents/youngTalentsInner">
-                          <img
-                            src="assets/images/team/team-07.webp"
-                            alt="team images"
-                          />
-                        </Link>
-                      </div>
-                    </div>
-                    <div className="content">
-                      <h5 className="title">
-                        <Link href="/youngTalents/youngTalentsInner">
-                          Penelope Cruz
-                        </Link>
-                      </h5>
-                      <span className="designation">Teacher</span>
-                      <p>
-                        Consectetur adipisicing elit, sed do eius mod tempor
-                        incididunt
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6">
-                <div
-                  data-aos="fade-up"
-                  data-aos-duration="800"
-                  className="edu-team-grid team-style-2"
-                >
-                  <div className="inner">
-                    <div className="thumbnail-wrap">
-                      <div className="thumbnail">
-                        <Link href="/youngTalents/youngTalentsInner">
-                          <img
-                            src="assets/images/team/team-16.webp"
-                            alt="team images"
-                          />
-                        </Link>
-                      </div>
-                    </div>
-                    <div className="content">
-                      <h5 className="title">
-                        <Link href="/youngTalents/youngTalentsInner">
-                          Michael Douglas
-                        </Link>
-                      </h5>
-                      <span className="designation">Teacher</span>
-                      <p>
-                        Consectetur adipisicing elit, sed do eius mod tempor
-                        incididunt
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6">
-                <div
-                  data-aos="fade-up"
-                  data-aos-duration="800"
-                  className="edu-team-grid team-style-2"
-                >
-                  <div className="inner">
-                    <div className="thumbnail-wrap">
-                      <div className="thumbnail">
-                        <Link href="/youngTalents/youngTalentsInner">
-                          <img
-                            src="assets/images/team/team-17.webp"
-                            alt="team images"
-                          />
-                        </Link>
-                      </div>
-                    </div>
-                    <div className="content">
-                      <h5 className="title">
-                        <Link href="/youngTalents/youngTalentsInner">
-                          Hilary Swank
-                        </Link>
-                      </h5>
-                      <span className="designation">Teacher</span>
-                      <p>
-                        Consectetur adipisicing elit, sed do eius mod tempor
-                        incididunt
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6">
-                <div
-                  data-aos="fade-up"
-                  data-aos-duration="800"
-                  className="edu-team-grid team-style-2"
-                >
-                  <div className="inner">
-                    <div className="thumbnail-wrap">
-                      <div className="thumbnail">
-                        <Link href="/youngTalents/youngTalentsInner">
-                          <img
-                            src="assets/images/team/team-18.webp"
-                            alt="team images"
-                          />
-                        </Link>
-                      </div>
-                    </div>
-                    <div className="content">
-                      <h5 className="title">
-                        <Link href="/youngTalents/youngTalentsInner">
-                          Steve Martin
-                        </Link>
-                      </h5>
-                      <span className="designation">Teacher</span>
-                      <p>
-                        Consectetur adipisicing elit, sed do eius mod tempor
-                        incididunt
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </div>
         </div>
