@@ -1,24 +1,20 @@
 import React from "react";
 import Link from "next/link";
 import { useState } from "react";
+import apiService from "@/common/services/api.service";
 
 const Postings = () => {
-  const [mockData, setMockData] = useState([]);
-  const [limit, setLimit] = useState(9);
+  const getData = async () => {
+    const data = await apiService.getPostings();
 
-  fetch("https://country-state-city.alikaan-net.workers.dev/test")
-    .then((response) => response.json())
-    .then((res) =>
-      res.length > limit
-        ? () => {
-            res.length = limit;
-            return res;
-          }
-        : res
-    )
+    setData(data);
+  };
 
-    .then((data) => setMockData(data))
-    .catch((error) => console.log(error));
+  React.useEffect(() => {
+    getData();
+  }, []);
+
+  const [data, setData] = useState([]);
 
   return (
     <div>
@@ -87,48 +83,8 @@ const Postings = () => {
               </div>
             </div>
             <div className="col-lg-9 col-pr--35 order-lg-1">
-              {mockData.map((item) => {
-                return (
-                  <div
-                    data-aos="fade-up"
-                    className="edu-course course-style-4 course-style-9"
-                  >
-                    <div className="inner">
-                      <div className="thumbnail">
-                        <Link href="/postings/postingsInner">
-                          <img
-                            src="/assets/images/course/course-12.jpg"
-                            alt="Course Meta"
-                          />
-                        </Link>
-                      </div>
-                      <div data-aos="fade-up" className="content">
-                        <h6 className="title">
-                          <Link href="/postings/postingsInner">
-                            {item.name}
-                          </Link>
-                        </h6>
-                        <a href="/postings/postingsInner">
-                          <p>{item.iso2}</p>
-                        </a>
-                        <div className="read-more-btn">
-                          <Link href="/postings/postingsInner"></Link>
-                          <Link
-                            className="edu-btn btn-border btn-medium"
-                            href="/postings/postingsInner"
-                            style={{
-                              backgroundColor: "#234b59",
-                              color: "#fff",
-                            }}
-                          >
-                            Learn More
-                            <i className="icon-4" />
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                );
+              {data.map((item) => {
+                return <PostingCards item={item} />;
               })}
             </div>
           </div>
@@ -137,5 +93,44 @@ const Postings = () => {
     </div>
   );
 };
+
+function PostingCards({ item }) {
+  return (
+    <div
+      data-aos="fade-up"
+      className="edu-course course-style-4 course-style-9"
+    >
+      <div className="inner">
+        <div className="thumbnail">
+          <Link href="/postings/postingsInner">
+            <img src="/assets/images/course/course-12.jpg" alt="Course Meta" />
+          </Link>
+        </div>
+        <div data-aos="fade-up" className="content">
+          <h6 className="title">
+            <Link href="/postings/postingsInner">{item.name}</Link>
+          </h6>
+          <a href="/postings/postingsInner">
+            <p>{item.iso2}</p>
+          </a>
+          <div className="read-more-btn">
+            <Link href="/postings/postingsInner"></Link>
+            <Link
+              className="edu-btn btn-border btn-medium"
+              href="/postings/postingsInner"
+              style={{
+                backgroundColor: "#234b59",
+                color: "#fff",
+              }}
+            >
+              Learn More
+              <i className="icon-4" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default Postings;

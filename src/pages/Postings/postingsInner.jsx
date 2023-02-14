@@ -6,19 +6,6 @@ const PostingsInner = () => {
     <div>
       <>
         <div className="edu-breadcrumb-area breadcrumb-style-3">
-          <div className="container">
-            <div className="breadcrumb-inner">
-              <div className="page-title">
-                <h1
-                  data-aos-duration="2000"
-                  data-aos="fade-right"
-                  className="title"
-                >
-                  Global Education Fall Meeting for Everyone
-                </h1>
-              </div>
-            </div>
-          </div>
           <ul className="shape-group">
             <li className="shape-1">
               <span />

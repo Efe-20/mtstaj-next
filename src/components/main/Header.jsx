@@ -33,7 +33,9 @@ const Header = () => {
                       <Link href="/postings">Açık İlanlar</Link>
                     </li>
                     <li>
-                      <Link href="/youngTalents">Genç Yetenek Programları</Link>
+                      <Link href="/young-talents">
+                        Genç Yetenek Programları
+                      </Link>
                     </li>
                     <li>
                       <Link href="/blogs">Bloglar</Link>
@@ -87,7 +89,7 @@ const Header = () => {
                 <a href="/postings">Açık İlanlar</a>
               </li>
               <li>
-                <a href="/youngTalents">Genç Yetenek Programları</a>
+                <a href="/young-talents">Genç Yetenek Programları</a>
               </li>
               <li>
                 <a href="/blogs">Bloglar</a>
